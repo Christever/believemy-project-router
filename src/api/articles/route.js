@@ -5,7 +5,7 @@ export async function POST(request) {
     const id = d.id;
     try {
         const response = await fetch(
-            `https://believemy-tuto-default-rtdb.europe-west1.firebasedatabase.app/${id}.json`
+            `https://believemy-tuto-default-rtdb.europe-west1.firebasedatabase.app/articles/${id}.json`
         );
         const data = await response.json();
 
