@@ -8,9 +8,11 @@ export default async function Article({ params: { id } }) {
     const article = await response.json();
 
     return (
-        <div className="w-[800px] mx-auto">
+        <>
             <h2 className="text-center text-3xl">{article.title}</h2>
-            <p>{article.content}</p>
-        </div>
+            <div className="w-[800px] mx-auto border border-gray-400 rounded-3xl mt-3">
+                <p className="p-3">{article.content}</p>
+            </div>
+        </>
     );
 }
