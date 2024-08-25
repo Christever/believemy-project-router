@@ -5,12 +5,11 @@ export default async function Article({ params: { id } }) {
         body: JSON.stringify({ id }),
     });
 
-    const data = response.json();
-    console.log(data);
+    const article = await response.json();
 
     return (
         <>
-            <h2>{id}</h2>
+            <h2 className="text-center text-3xl">{article.title}</h2>
         </>
     );
 }
